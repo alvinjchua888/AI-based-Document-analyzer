@@ -2,6 +2,12 @@
 
 An intelligent document analysis application built with **Streamlit**, **LangChain**, and **OpenAI/Gemini**. This tool allows users to upload documents (PDF, Word, Excel, PowerPoint) and automatically extract key information including creation dates, revision dates, content summaries, and category suggestions.
 
+## 📸 Application Screenshot
+
+![AI Document Analyzer Interface](https://github.com/user-attachments/assets/178db276-d181-4214-b662-17c1907c890c)
+
+*The main interface showing the configuration sidebar, document upload area, and quick stats dashboard*
+
 ## Features ✨
 
 - **Multi-Format Support**: Upload PDF, Word (.docx), Excel (.xlsx), and PowerPoint (.pptx) files
@@ -69,6 +75,27 @@ An intelligent document analysis application built with **Streamlit**, **LangCha
    AI_PROVIDER=gemini
    GOOGLE_API_KEY=your_google_api_key_here
    ```
+
+## User Interface 🎨
+
+The application features a clean, intuitive interface with three main sections:
+
+### Left Sidebar - Configuration
+- **AI Provider Selection**: Choose between OpenAI or Google Gemini
+- **API Key Input**: Securely enter your API credentials
+- **Supported Formats**: Quick reference of accepted file types
+- **Analysis Features**: List of extraction capabilities
+
+### Main Area - Document Upload
+- **Drag & Drop Zone**: Simply drag files or click "Browse files"
+- **Multi-File Support**: Upload multiple documents at once
+- **Format Validation**: Automatic checking for supported formats
+- **Progress Tracking**: Real-time analysis progress
+
+### Right Side - Quick Stats
+- **Document Count**: Total analyzed documents
+- **Category Distribution**: Breakdown by suggested categories
+- **Results Display**: Expandable sections showing analysis results
 
 ## Usage 📖
 
