@@ -5,6 +5,7 @@ Uses LangChain with OpenAI or Gemini to analyze document content.
 
 import os
 from typing import Dict, Optional
+from datetime import datetime
 from langchain_openai import ChatOpenAI
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain.prompts import ChatPromptTemplate
@@ -99,7 +100,6 @@ class AIDocumentAnalyzer:
                 if date_str.startswith('D:'):
                     date_str = date_str[2:14]
                     try:
-                        from datetime import datetime
                         parsed_date = datetime.strptime(date_str, '%Y%m%d%H%M%S')
                         return parsed_date.strftime('%Y-%m-%d')
                     except:
@@ -117,7 +117,6 @@ class AIDocumentAnalyzer:
                 if date_str.startswith('D:'):
                     date_str = date_str[2:14]
                     try:
-                        from datetime import datetime
                         parsed_date = datetime.strptime(date_str, '%Y%m%d%H%M%S')
                         return parsed_date.strftime('%Y-%m-%d')
                     except:

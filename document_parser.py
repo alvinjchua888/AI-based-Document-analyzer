@@ -5,7 +5,7 @@ Handles extraction of text and metadata from various document formats.
 
 import os
 from datetime import datetime
-from typing import Dict, Optional
+from typing import Dict, Optional, Any
 import PyPDF2
 from docx import Document
 from pptx import Presentation
@@ -18,7 +18,7 @@ class DocumentParser:
     def __init__(self):
         self.supported_formats = ['.pdf', '.docx', '.xlsx', '.pptx']
     
-    def parse_document(self, file_path: str) -> Dict[str, any]:
+    def parse_document(self, file_path: str) -> Dict[str, Any]:
         """
         Parse document and return text content and metadata.
         
@@ -57,7 +57,7 @@ class DocumentParser:
         
         return result
     
-    def _parse_pdf(self, file_path: str) -> Dict[str, any]:
+    def _parse_pdf(self, file_path: str) -> Dict[str, Any]:
         """Extract text and metadata from PDF files."""
         text_content = []
         metadata = {}
@@ -90,7 +90,7 @@ class DocumentParser:
             'metadata': metadata
         }
     
-    def _parse_docx(self, file_path: str) -> Dict[str, any]:
+    def _parse_docx(self, file_path: str) -> Dict[str, Any]:
         """Extract text and metadata from Word documents."""
         text_content = []
         metadata = {}
@@ -131,7 +131,7 @@ class DocumentParser:
             'metadata': metadata
         }
     
-    def _parse_xlsx(self, file_path: str) -> Dict[str, any]:
+    def _parse_xlsx(self, file_path: str) -> Dict[str, Any]:
         """Extract text and metadata from Excel spreadsheets."""
         text_content = []
         metadata = {}
@@ -170,7 +170,7 @@ class DocumentParser:
             'metadata': metadata
         }
     
-    def _parse_pptx(self, file_path: str) -> Dict[str, any]:
+    def _parse_pptx(self, file_path: str) -> Dict[str, Any]:
         """Extract text and metadata from PowerPoint presentations."""
         text_content = []
         metadata = {}
